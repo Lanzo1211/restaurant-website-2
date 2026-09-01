@@ -1,4 +1,12 @@
-function showsidebar(){
+function showSidebar(){
   const menu = document.querySelector('.menu')
-  menu.style.display = 'flex'
+if(menu){
+  menu.style.display = "flex";
+}
+} 
+function hideSidebar(){
+  const menu = document.querySelector('.menu')
+if(menu){
+  menu.style.display = "none";
+}
 } 
