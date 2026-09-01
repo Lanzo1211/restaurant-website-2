@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(113, 149, 149);
+}
+.logo{
+    background-color: white;
+    box-shadow: 3px 3px 5px blacks;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    height: 70px;
+    background-color: rgb(56, 54, 52);
+    
+}
+.logo li{
+    list-style-type: none;
+    
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: gray;
+    margin-top: 15px;
+}
+.logo img {
+    width: 100px;
+    height: 70px;
+}
+.logo ul{
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 14px;
+    }
+.logo h1{
+    align-items: center;
+    display: flex;
+    margin-right: 290px;
+    color: rgb(111, 128, 128);
+    font-family: cursive;
+}
+.logo li{
+    padding: 0 210px;
+}
+.menu{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color:  rgba(210, 206, 167, 0.084);
+    box-shadow: -2px 0 10px rgb(57, 82, 82);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    backdrop-filter: blur(10px);
+}
+.menu ul{
+    list-style-type: none;
+}
+.menu li {
+    height: 60px;
+}
+.menu a{
+    height:100%;
+    text-decoration: none;
+    align-items: center;
+    color: azure;
+    padding: 0 30px;
+    display: flex;
+
+}
