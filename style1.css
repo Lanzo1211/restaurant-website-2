@@ -1,4 +1,3 @@
-
 *{
     margin: 0;
     padding: 0;
@@ -28,17 +27,16 @@ h1{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     color: rgb(239, 236, 230);
     padding: 20px;
+    font-style: italic;
 }
 h4{
     color: rgb(182, 190, 190);
 }
 nav{
-    background-image: url(depositphotos_113525248-stock-photo-set-of-different-pizzas.jpg);
-    background-color: lime;
+    background-image:url(istockphoto-1551595837-612x612.jpg);
     display: grid;
     place-items: center;
     border-radius: 15px;
-    
 }
 nav ul{
 
@@ -55,30 +53,32 @@ nav ul a {
     padding: 20px;
     font-size: larger;
     text-decoration: none;
-    color: rgb(2, 24, 1);
+    color: rgb(244, 248, 248);
     transition: 0.2s ease-in;
     justify-content: space-between;
+
 
 }
 nav ul a:hover{
     background-color: rgb(27, 139, 131);
     color: rgb(239, 233, 233);
+    border-radius: 30px;
 }
 .items{
      display: grid;
      grid-template-columns: repeat(3,1fr);
-     padding: 30px 20px;
-     gap:30px 20px;
+     gap:3px 20px;
+     margin-top: 40px;
 }
 .item{
     display: flex;
   flex-direction: column;
-  align-items: center; /* Centers text and buttons horizontally */
+  align-items: center; 
   text-align: center;
 }
 .item img{
-    width: 100%;
-    height: 300%;
+    width: 50%;
+    height: 90%;
     object-fit: cover;
     cursor: pointer;
     border-radius: 40%;
@@ -106,19 +106,23 @@ nav ul a:hover{
 .item button :hover{
     transform: scale(1.04);
 }
-@media screen and (max-width:1000px){
-    .items{
-        grid-template-columns: repeat(2,1fr);
+@media (max-width: 767px ){ 
+    
+h1{
+        font-size: medium;
+        margin-left: 120px;
     }
-}
-@media screen and (max-width:768px){
-    .items{
-        grid-template-columns: repeat(1,1fr);
+nav {
+      display: none;   
     }
-}
-@media screen and (max-width:760px){
-    nav ul {
-        gap: 15px;
+    .items {
+        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: 1fr; 
+        padding: 30px 40px;
+        gap: 20px; 
+    }
 
+    .item img {
+        width: 70%; 
     }
 }
