@@ -80,7 +80,7 @@ body{
     height: 100vh;
     width: 100%;
     z-index: 999;
-    background-color:  rgba(210, 206, 167, 0.084);
+    background-color:  rgba(126, 8, 100, 0.073);
     box-shadow: -2px 0 10px rgb(51, 86, 86);
     display: none;
     flex-direction: column;
@@ -89,37 +89,41 @@ body{
     backdrop-filter: blur(10px);
     
 }
-.menu.active{
-    left: 0;
-}
-.menu-header{
-    padding: 1rem;
-    border-bottom: 1px soild #333;
-}
+
 .menu ul{
     list-style-type: none;
     margin-top: 1rem;
     
 }
 .menu li {
-    padding: 0.75rem 1rem;
-    border-bottom: 1px solid #333;
-    
+    padding: 0.78rem 1rem;
 }
 .menu a{
     text-align: center;
     background-color: rgba(158, 198, 198, 0.158);
-    border-radius: 40px;
+    border-radius: 35px;
     backdrop-filter: blur(100px);
-    width: 120px;
+    width: 135px;
     height:50px;
     text-decoration: none;
-    align-items: center;
     color: azure;
-    padding: 0 4px;
     display: block;
-    font-size: 25px;
+    font-size: 27px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.menu li ::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: white;
+    bottom: 0;
+    left: 50%;
+    transition: all 0.3s ease;
+}
+.menu li :hover::after{
+    width: 100%;
+    left: 0;
 }
 .menu li :first-child {
     margin-left: 565px;
@@ -229,4 +233,187 @@ margin-left: 100px;
     position: absolute;
     top: 90%;
  
+}
+.inro video{
+    height: 50%px;
+    width: 50%px;
+}
+.ai-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    font-family: sans-serif;
+}
+
+.ai-float-btn {
+    background-color: rgb(16, 43, 75);
+    color: white;
+    border: none;
+    padding: 15px 22px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: transform 0.2s ease;
+}
+.ai-float-btn:hover {
+    transform: scale(1.05);
+}
+.ai-box {
+    display: none; 
+    flex-direction: column;
+    width: 300px;
+    height: 400px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+.ai-header {
+    background-color: rgb(56, 54, 52);
+    color: white;
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+.ai-header button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+.ai-body {
+    flex: 1;
+    padding: 15px;
+    background-color: #f7f9fa;
+    color: #333;
+    font-size: 14px;
+}
+.ai-footer {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #eee;
+    background-color: white;
+}
+.ai-footer input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    outline: none;
+}
+.ai-footer button {
+    background-color: rgb(16, 43, 75);
+    color: white;
+    border: none;
+    padding: 0 15px;
+    margin-left: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+    .ai-float-btn{
+        display: none;
+    }
+
+    .logo {
+        height: auto;
+        padding: 9px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo h1 {
+        margin-right: 0; 
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+    }
+    .logo ul {
+        justify-content: center;
+        margin-bottom: 0;
+    }
+    .logo li {
+        padding: 0 10px;
+        margin-top: 10px;
+    }
+    .logo li button {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .nav-desktop {
+        display: none; 
+
+    .menu li :first-child {
+        margin-left: 0; 
+    }
+   
+}
+    .welcome {
+        font-size: 28px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .inro p{
+        font-size: small;
+        margin-left: 3px;
+       
+    }
+    .inro h2{
+        order: 2;
+    }
+
+    .container {
+        position: relative;
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        gap: 1rem;
+    }
+    .container h2, 
+    .container p {
+        position: static; 
+        max-width: 100%;
+        margin: 10px 0;
+        font-size: 20px;
+        text-align: center;
+        text-align-last: center;
+        font-size: small;
+    }
+    .img2 {
+        position: static; 
+        max-width: 85%;
+        width: 250px;
+        height: 250px; 
+        margin: 15px auto;
+        border-radius: 50%;
+    }
+    .img1{    position: static; 
+        max-width: 85%;
+        width: 250px;
+        height: 250px; 
+        margin: 15px auto;
+        border-radius: 50%;
+    }
+    .menu a{
+        font-size: small;
+        margin-left: 40000px;
+         padding: 13px;
+    }
+    .menu li{
+     font-size: small;
+     margin-right: 60px;
+     display: flex;
+    }
+   .menu li :first-child {
+    margin-left: 160px;
+    
+}
 }
